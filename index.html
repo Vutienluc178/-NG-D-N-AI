@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools for Teachers - Công cụ AI cho Giáo viên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .ai-icon { 
+            background: linear-gradient(45deg, #4f46e5, #7c3aed);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .feature-tag {
+            background: linear-gradient(90deg, #10b981, #059669);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="ai-icon w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Tools for Teachers</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-8">Bộ sưu tập 7 công cụ AI tốt nhất dành cho giáo viên</p>
+            <div class="feature-tag inline-block">🚀 Nâng cao hiệu quả giảng dạy</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- ChatGPT -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">💬</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">ChatGPT</h3>
+                        <p class="text-sm text-gray-500">Trợ giảng ảo thông minh</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Soạn giáo án, gợi ý bài tập, giải thích kiến thức phức tạp theo cách dễ hiểu cho học sinh.</p>
+                <button onclick="openLink('https://chat.openai.com')" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập ChatGPT →
+                </button>
+            </div>
+
+            <!-- Perplexity -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">🔍</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Perplexity</h3>
+                        <p class="text-sm text-gray-500">Tìm tài liệu + nguồn tin chính thống</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Giáo viên dễ dàng tổng hợp tài liệu tham khảo, xu hướng giáo dục mới, có kèm dẫn chứng rõ ràng.</p>
+                <button onclick="openLink('https://perplexity.ai')" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập Perplexity →
+                </button>
+            </div>
+
+            <!-- Notion AI -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">📝</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Notion AI</h3>
+                        <p class="text-sm text-gray-500">Quản lý lớp học & nội dung dạy học</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Tạo giáo án, checklist công việc, hệ thống hóa ý tưởng thành giáo trình mạch lạc.</p>
+                <button onclick="openLink('https://notion.so')" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập Notion →
+                </button>
+            </div>
+
+            <!-- Canva for Education -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">🎨</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Canva for Education</h3>
+                        <p class="text-sm text-gray-500">Thiết kế tài liệu giảng dạy trực quan</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Dễ dàng tạo slide, poster, bài tập minh họa đẹp mắt, kích thích học sinh hứng thú.</p>
+                <button onclick="openLink('https://www.canva.com/education')" class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập Canva →
+                </button>
+            </div>
+
+            <!-- Quizizz AI -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-pink-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">🎯</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Quizizz AI</h3>
+                        <p class="text-sm text-gray-500">Tạo quiz & bài kiểm tra tự động</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Sinh câu hỏi trắc nghiệm từ văn bản/bài giảng, học sinh vừa chơi vừa học.</p>
+                <button onclick="openLink('https://quizizz.com')" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập Quizizz →
+                </button>
+            </div>
+
+            <!-- StarSpark.AI -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">⭐</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">StarSpark.AI</h3>
+                        <p class="text-sm text-gray-500">Trợ lý học tập thông minh</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Giúp học sinh đặt câu hỏi và được giải thích từng bước rõ ràng, đồng thời hỗ trợ giáo viên theo dõi tiến bộ học tập.</p>
+                <button onclick="openLink('https://starspark.ai')" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập StarSpark →
+                </button>
+            </div>
+
+            <!-- Edpuzzle -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100 md:col-span-2 lg:col-span-1">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">🎬</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Edpuzzle</h3>
+                        <p class="text-sm text-gray-500">Tạo video học tập tương tác</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">Thêm câu hỏi, bài tập nhỏ vào video để kiểm tra sự tập trung và hiểu bài của học sinh.</p>
+                <button onclick="openLink('https://edpuzzle.com')" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200">
+                    Truy cập Edpuzzle →
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="mt-16 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tại sao nên sử dụng AI trong giảng dạy?</h2>
+                <p class="text-gray-600 text-lg">Các con số ấn tượng về hiệu quả của AI trong giáo dục</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-500 mb-2">70%</div>
+                    <p class="text-gray-600">Tiết kiệm thời gian soạn giáo án</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-500 mb-2">85%</div>
+                    <p class="text-gray-600">Tăng sự tương tác của học sinh</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-purple-500 mb-2">60%</div>
+                    <p class="text-gray-600">Cải thiện kết quả học tập</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="ai-icon w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">AI Tools for Teachers</h3>
+            <p class="text-gray-400 mb-6">Nâng cao chất lượng giảng dạy với công nghệ AI</p>
+            <p class="text-sm text-gray-500">© 2024 - Bộ sưu tập công cụ AI dành cho giáo viên</p>
+        </div>
+    </footer>
+
+    <script>
+        function openLink(url) {
+            // Add a small animation before opening
+            event.target.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                event.target.style.transform = 'scale(1)';
+                window.open(url, '_blank');
+            }, 100);
+        }
+
+        // Add smooth scroll animation for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach((card) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975cc76566cc87fc',t:'MTc1NjMxMDM5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
