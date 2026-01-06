@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* KaTeX tweaks */
+.katex {
+  font-size: 1.04em;
+}
+
+/* Slide canvas (screen) */
+.slide {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 1280px;
+  background: white;
+  border: 1px solid rgb(228 228 231);
+  border-radius: 16px;
+}
+
+/* Print-to-PDF: each slide is one page (16:9) */
+@media print {
+  @page {
+    /* 16:9 slide (widescreen). */
+    size: 13.333in 7.5in;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Avoid browser adding margins/padding. */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide UI controls in print. */
+  .no-print {
+    display: none !important;
+  }
+
+  .print-slide {
+    width: 13.333in;
+    height: 7.5in;
+    page-break-after: always;
+    break-after: page;
+  }
+}
