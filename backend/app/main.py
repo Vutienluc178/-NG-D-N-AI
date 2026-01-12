@@ -4,6 +4,7 @@ import asyncio
 import json
 import time
 import uuid
+import os
 from pathlib import Path
 from typing import Any, Optional
 
@@ -20,7 +21,7 @@ from .translator import DummyTranslator
 
 
 APP_NAME = "PDF Dịch Việt (MVP)"
-STORAGE_DIR = Path("/workspace/backend/storage")
+STORAGE_DIR = Path(os.environ.get("APP_STORAGE_DIR", "/tmp/pdf_translate_storage" if os.environ.get("VERCEL") else "/workspace/backend/storage"))
 STORAGE_DIR.mkdir(parents=True, exist_ok=True)
 
 translator = DummyTranslator()

@@ -49,7 +49,9 @@ CREATE INDEX IF NOT EXISTS idx_chunks_job_order ON chunks(job_id, reading_order)
 
 
 def _db_path() -> Path:
-    p = os.environ.get("APP_DB_PATH", "/workspace/backend/data/app.sqlite")
+    # Vercel (serverless) chỉ ghi được vào /tmp. Local/dev có thể override bằng APP_DB_PATH.
+    default = "/tmp/pdf_translate_app.sqlite" if os.environ.get("VERCEL") else "/workspace/backend/data/app.sqlite"
+    p = os.environ.get("APP_DB_PATH", default)
     return Path(p)
 
 
